@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <i class="fas fa-graduation-cap"></i>
+      <span>EduManage</span>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#" class="nav-link active" data-page="dashboard">
+        <i class="fas fa-tachometer-alt"></i><span>Dashboard</span>
+      </a>
+      <a href="#" class="nav-link" data-page="add-student">
+        <i class="fas fa-user-plus"></i><span>Add Student</span>
+      </a>
+      <a href="#" class="nav-link" data-page="student-list">
+        <i class="fas fa-users"></i><span>Student List</span>
+      </a>
+      <a href="#" class="nav-link" data-page="about">
+        <i class="fas fa-info-circle"></i><span>About</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <i class="fas fa-shield-alt"></i>
+      <span>Admin Panel v1.0</span>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-wrapper" id="main-wrapper">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="sidebar-toggle" id="sidebar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="page-title" id="page-title">Dashboard</h1>
+      </div>
+      <div class="topbar-right">
+        <div class="admin-info">
+          <i class="fas fa-user-circle"></i>
+          <span>Admin</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <main class="content" id="content">
+
+      <!-- ===== DASHBOARD PAGE ===== -->
+      <section class="page active" id="page-dashboard">
+        <div class="stats-grid">
+          <div class="stat-card blue">
+            <div class="stat-icon"><i class="fas fa-users"></i></div>
+            <div class="stat-info">
+              <h3 id="stat-total">0</h3>
+              <p>Total Students</p>
+            </div>
+          </div>
+          <div class="stat-card green">
+            <div class="stat-icon"><i class="fas fa-male"></i></div>
+            <div class="stat-info">
+              <h3 id="stat-male">0</h3>
+              <p>Male Students</p>
+            </div>
+          </div>
+          <div class="stat-card pink">
+            <div class="stat-icon"><i class="fas fa-female"></i></div>
+            <div class="stat-info">
+              <h3 id="stat-female">0</h3>
+              <p>Female Students</p>
+            </div>
+          </div>
+          <div class="stat-card orange">
+            <div class="stat-icon"><i class="fas fa-book"></i></div>
+            <div class="stat-info">
+              <h3 id="stat-courses">0</h3>
+              <p>Total Courses</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-bottom">
+          <div class="recent-card">
+            <div class="card-header">
+              <h2><i class="fas fa-clock"></i> Recently Added Students</h2>
+            </div>
+            <div class="recent-list" id="recent-list">
+              <p class="no-data">No students added yet.</p>
+            </div>
+          </div>
+          <div class="chart-card">
+            <div class="card-header">
+              <h2><i class="fas fa-chart-pie"></i> Gender Distribution</h2>
+            </div>
+            <div class="gender-chart" id="gender-chart">
+              <div class="donut-wrap">
+                <svg viewBox="0 0 36 36" class="donut-svg">
+                  <circle class="donut-ring" cx="18" cy="18" r="15.9" fill="transparent" stroke="#e0e0e0" stroke-width="3.5"/>
+                  <circle class="donut-male" cx="18" cy="18" r="15.9" fill="transparent" stroke="#4f8ef7" stroke-width="3.5"
+                    stroke-dasharray="0 100" stroke-dashoffset="25" id="donut-male"/>
+                  <circle class="donut-female" cx="18" cy="18" r="15.9" fill="transparent" stroke="#f7a44f" stroke-width="3.5"
+                    stroke-dasharray="0 100" stroke-dashoffset="25" id="donut-female"/>
+                </svg>
+                <div class="donut-center" id="donut-center">0<br><small>Total</small></div>
+              </div>
+              <div class="chart-legend">
+                <span class="legend-dot blue"></span> Male: <strong id="legend-male">0</strong>
+                <span class="legend-dot orange"></span> Female: <strong id="legend-female">0</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ADD / EDIT STUDENT PAGE ===== -->
+      <section class="page" id="page-add-student">
+        <div class="form-card">
+          <div class="card-header">
+            <h2 id="form-heading"><i class="fas fa-user-plus"></i> Add New Student</h2>
+          </div>
+          <form id="student-form" novalidate>
+            <input type="hidden" id="edit-index" value="" />
+
+            <div class="form-grid">
+              <!-- Student ID -->
+              <div class="form-group">
+                <label for="studentId">Student ID <span class="req">*</span></label>
+                <input type="text" id="studentId" placeholder="e.g. STD-001" />
+                <span class="err" id="err-studentId"></span>
+              </div>
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="fullName">Full Name <span class="req">*</span></label>
+                <input type="text" id="fullName" placeholder="Muhammad Ali" />
+                <span class="err" id="err-fullName"></span>
+              </div>
+              <!-- Father Name -->
+              <div class="form-group">
+                <label for="fatherName">Father Name <span class="req">*</span></label>
+                <input type="text" id="fatherName" placeholder="Muhammad Farooq" />
+                <span class="err" id="err-fatherName"></span>
+              </div>
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" placeholder="student@example.com" />
+                <span class="err" id="err-email"></span>
+              </div>
+              <!-- Phone -->
+              <div class="form-group">
+                <label for="phone">Phone Number <span class="req">*</span></label>
+                <input type="text" id="phone" placeholder="03001234567" maxlength="11" />
+                <span class="err" id="err-phone"></span>
+              </div>
+              <!-- Gender -->
+              <div class="form-group">
+                <label for="gender">Gender <span class="req">*</span></label>
+                <select id="gender">
+                  <option value="">-- Select Gender --</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="err" id="err-gender"></span>
+              </div>
+              <!-- DOB -->
+              <div class="form-group">
+                <label for="dob">Date of Birth <span class="req">*</span></label>
+                <input type="date" id="dob" />
+                <span class="err" id="err-dob"></span>
+              </div>
+              <!-- Course -->
+              <div class="form-group">
+                <label for="course">Course <span class="req">*</span></label>
+                <select id="course">
+                  <option value="">-- Select Course --</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Software Engineering">Software Engineering</option>
+                  <option value="Information Technology">Information Technology</option>
+                  <option value="Data Science">Data Science</option>
+                  <option value="Artificial Intelligence">Artificial Intelligence</option>
+                  <option value="Cyber Security">Cyber Security</option>
+                  <option value="Business Administration">Business Administration</option>
+                  <option value="Accounting & Finance">Accounting & Finance</option>
+                </select>
+                <span class="err" id="err-course"></span>
+              </div>
+              <!-- Semester -->
+              <div class="form-group">
+                <label for="semester">Semester <span class="req">*</span></label>
+                <select id="semester">
+                  <option value="">-- Select Semester --</option>
+                  <option value="1st">1st Semester</option>
+                  <option value="2nd">2nd Semester</option>
+                  <option value="3rd">3rd Semester</option>
+                  <option value="4th">4th Semester</option>
+                  <option value="5th">5th Semester</option>
+                  <option value="6th">6th Semester</option>
+                  <option value="7th">7th Semester</option>
+                  <option value="8th">8th Semester</option>
+                </select>
+                <span class="err" id="err-semester"></span>
+              </div>
+              <!-- City -->
+              <div class="form-group">
+                <label for="city">City <span class="req">*</span></label>
+                <input type="text" id="city" placeholder="Karachi" />
+                <span class="err" id="err-city"></span>
+              </div>
+              <!-- Address -->
+              <div class="form-group full-width">
+                <label for="address">Address <span class="req">*</span></label>
+                <textarea id="address" rows="3" placeholder="Street No. 5, Block B, Karachi"></textarea>
+                <span class="err" id="err-address"></span>
+              </div>
+              <!-- Profile Picture -->
+              <div class="form-group full-width">
+                <label for="profilePic">Profile Picture <span class="optional">(Optional)</span></label>
+                <div class="pic-upload">
+                  <div class="pic-preview" id="pic-preview">
+                    <i class="fas fa-user-circle"></i>
+                  </div>
+                  <label class="upload-btn" for="profilePic">
+                    <i class="fas fa-upload"></i> Choose Photo
+                  </label>
+                  <input type="file" id="profilePic" accept="image/*" style="display:none" />
+                  <span class="pic-name" id="pic-name">No file chosen</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn btn-secondary" id="reset-form-btn">
+                <i class="fas fa-redo"></i> Reset
+              </button>
+              <button type="submit" class="btn btn-primary" id="submit-btn">
+                <i class="fas fa-save"></i> Save Student
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- ===== STUDENT LIST PAGE ===== -->
+      <section class="page" id="page-student-list">
+        <div class="list-controls">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search-input" placeholder="Search by name, email, or ID..." />
+          </div>
+          <div class="filters">
+            <select id="filter-gender">
+              <option value="">All Genders</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+            <select id="filter-course">
+              <option value="">All Courses</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Software Engineering">Software Engineering</option>
+              <option value="Information Technology">Information Technology</option>
+              <option value="Data Science">Data Science</option>
+              <option value="Artificial Intelligence">Artificial Intelligence</option>
+              <option value="Cyber Security">Cyber Security</option>
+              <option value="Business Administration">Business Administration</option>
+              <option value="Accounting & Finance">Accounting & Finance</option>
+            </select>
+            <select id="filter-semester">
+              <option value="">All Semesters</option>
+              <option value="1st">1st</option>
+              <option value="2nd">2nd</option>
+              <option value="3rd">3rd</option>
+              <option value="4th">4th</option>
+              <option value="5th">5th</option>
+              <option value="6th">6th</option>
+              <option value="7th">7th</option>
+              <option value="8th">8th</option>
+            </select>
+            <select id="filter-city">
+              <option value="">All Cities</option>
+            </select>
+            <select id="sort-by">
+              <option value="">Sort By</option>
+              <option value="name-asc">Name (A-Z)</option>
+              <option value="name-desc">Name (Z-A)</option>
+              <option value="newest">Latest Added</option>
+              <option value="oldest">Oldest Added</option>
+              <option value="semester">Semester</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-meta">
+          <span id="result-count">Showing 0 students</span>
+          <button class="btn btn-primary btn-sm" id="add-new-btn">
+            <i class="fas fa-plus"></i> Add Student
+          </button>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="students-table" id="students-table">
+            <thead>
+              <tr>
+                <th>Picture</th>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Semester</th>
+                <th>City</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="students-tbody">
+              <tr class="no-records">
+                <td colspan="8"><i class="fas fa-inbox"></i><br>No students found.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ===== STUDENT DETAIL MODAL ===== -->
+      <div class="modal-overlay" id="detail-modal">
+        <div class="modal-box">
+          <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+          <div class="modal-profile">
+            <div class="modal-avatar" id="modal-avatar">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <h2 id="modal-name">-</h2>
+            <span class="badge" id="modal-course-badge">-</span>
+          </div>
+          <div class="modal-details" id="modal-details"></div>
+        </div>
+      </div>
+
+      <!-- ===== DELETE CONFIRMATION MODAL ===== -->
+      <div class="modal-overlay" id="delete-modal">
+        <div class="modal-box confirm-box">
+          <div class="confirm-icon"><i class="fas fa-exclamation-triangle"></i></div>
+          <h2>Are you sure?</h2>
+          <p>This student record will be permanently deleted. This action cannot be undone.</p>
+          <div class="confirm-actions">
+            <button class="btn btn-secondary" id="cancel-delete">No, Cancel</button>
+            <button class="btn btn-danger" id="confirm-delete">Yes, Delete</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== ABOUT PAGE ===== -->
+      <section class="page" id="page-about">
+        <div class="about-card">
+          <div class="about-logo">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h1>EduManage</h1>
+          <p class="about-subtitle">Student Management System v1.0</p>
+          <p class="about-desc">
+            A fully client-side student management application built with pure HTML, CSS, and JavaScript.
+            All data is persisted in the browser's Local Storage — no backend or database required.
+          </p>
+          <div class="about-features">
+            <div class="about-feature"><i class="fas fa-check-circle"></i> Add, Edit & Delete Students</div>
+            <div class="about-feature"><i class="fas fa-check-circle"></i> Search, Filter & Sort</div>
+            <div class="about-feature"><i class="fas fa-check-circle"></i> Profile Picture Upload</div>
+            <div class="about-feature"><i class="fas fa-check-circle"></i> Local Storage Persistence</div>
+            <div class="about-feature"><i class="fas fa-check-circle"></i> Fully Responsive Design</div>
+            <div class="about-feature"><i class="fas fa-check-circle"></i> Interactive Dashboard</div>
+          </div>
+          <div class="about-tech">
+            <span><i class="fab fa-html5"></i> HTML5</span>
+            <span><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span><i class="fab fa-js-square"></i> JavaScript ES6+</span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
