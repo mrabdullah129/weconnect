@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Result Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <h1>🎓 Student Result Management System</h1>
+      <p>Manage student marks, grades and results easily</p>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Search Bar -->
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="🔍 Search student by name or roll number..." oninput="searchStudents()" />
+    </section>
+
+    <!-- Add / Edit Student Form -->
+    <section class="form-section">
+      <h2 id="formTitle">➕ Add New Student</h2>
+      <form id="studentForm" onsubmit="handleFormSubmit(event)">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="studentName">Student Name *</label>
+            <input type="text" id="studentName" placeholder="Enter full name" />
+            <span class="error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="rollNumber">Roll Number *</label>
+            <input type="text" id="rollNumber" placeholder="e.g. 001" />
+            <span class="error" id="rollError"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="className">Class *</label>
+            <input type="text" id="className" placeholder="e.g. 10-A" />
+            <span class="error" id="classError"></span>
+          </div>
+        </div>
+
+        <h3 class="marks-heading">📝 Enter Subject Marks (out of 100)</h3>
+        <div class="form-row marks-row">
+          <div class="form-group">
+            <label for="math">Mathematics</label>
+            <input type="number" id="math" placeholder="0-100" min="0" max="100" />
+            <span class="error" id="mathError"></span>
+          </div>
+          <div class="form-group">
+            <label for="english">English</label>
+            <input type="number" id="english" placeholder="0-100" min="0" max="100" />
+            <span class="error" id="englishError"></span>
+          </div>
+          <div class="form-group">
+            <label for="urdu">Urdu</label>
+            <input type="number" id="urdu" placeholder="0-100" min="0" max="100" />
+            <span class="error" id="urduError"></span>
+          </div>
+          <div class="form-group">
+            <label for="science">Science</label>
+            <input type="number" id="science" placeholder="0-100" min="0" max="100" />
+            <span class="error" id="scienceError"></span>
+          </div>
+          <div class="form-group">
+            <label for="computer">Computer</label>
+            <input type="number" id="computer" placeholder="0-100" min="0" max="100" />
+            <span class="error" id="computerError"></span>
+          </div>
+        </div>
+
+        <input type="hidden" id="editIndex" value="-1" />
+
+        <div class="form-buttons">
+          <button type="submit" class="btn btn-primary" id="submitBtn">➕ Add Student</button>
+          <button type="button" class="btn btn-secondary" onclick="resetForm()">🔄 Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Stats Cards -->
+    <section class="stats-section" id="statsSection">
+      <div class="stat-card total">
+        <span class="stat-icon">👥</span>
+        <div>
+          <p>Total Students</p>
+          <h3 id="totalStudents">0</h3>
+        </div>
+      </div>
+      <div class="stat-card pass">
+        <span class="stat-icon">✅</span>
+        <div>
+          <p>Passed</p>
+          <h3 id="totalPassed">0</h3>
+        </div>
+      </div>
+      <div class="stat-card fail">
+        <span class="stat-icon">❌</span>
+        <div>
+          <p>Failed</p>
+          <h3 id="totalFailed">0</h3>
+        </div>
+      </div>
+      <div class="stat-card avg">
+        <span class="stat-icon">📊</span>
+        <div>
+          <p>Class Average</p>
+          <h3 id="classAverage">0%</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Table -->
+    <section class="table-section">
+      <div class="table-header">
+        <h2>📋 Student Results</h2>
+        <button class="btn btn-danger" onclick="clearAllStudents()" id="clearAllBtn" style="display:none;">🗑️ Clear All</button>
+      </div>
+      <div class="table-wrapper">
+        <table id="resultsTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Roll No.</th>
+              <th>Class</th>
+              <th>Math</th>
+              <th>English</th>
+              <th>Urdu</th>
+              <th>Science</th>
+              <th>Computer</th>
+              <th>Total</th>
+              <th>%</th>
+              <th>Grade</th>
+              <th>Result</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Rows inserted by JS -->
+          </tbody>
+        </table>
+      </div>
+      <div class="empty-state" id="emptyState">
+        <span>📭</span>
+        <p>No students added yet. Fill the form above to get started!</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
