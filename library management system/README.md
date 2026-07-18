@@ -1,5 +1,5 @@
 #Dashboard#
-<img width="894" height="438" alt="Screenshot 2026-07-18 134313" src="https://github.com/user-attachments/assets/5688fce5-a532-4685-9db2-355a554bae28" /><img width="445" height="389" alt="Screenshot 2026-07-18 132204" src="https://github.com/user-attachments/assets/a7a5c616-ec4b-48b6-8ad2-9896907d5790" />
+
 <img width="947" height="442" alt="Screenshot 2026-07-18 130328" src="https://github.com/user-attachments/assets/52873387-ca2b-49ec-afce-7b7ef47e2abc" />
 <img width="896" height="319" alt="Screenshot 2026-07-18 130339" src="https://github.com/user-attachments/assets/29e21223-0b78-410d-b0f3-79364ba6f82c" />
 <img width="898" height="302" alt="Screenshot 2026-07-18 130348" src="https://github.com/user-attachments/assets/760a838f-bdde-4a3b-8c3d-b6e7a30fe604" />
