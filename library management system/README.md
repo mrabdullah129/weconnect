@@ -1,3 +1,14 @@
+#Dashboard#
+<img width="947" height="442" alt="Screenshot 2026-07-18 130328" src="https://github.com/user-attachments/assets/52873387-ca2b-49ec-afce-7b7ef47e2abc" />
+<img width="896" height="319" alt="Screenshot 2026-07-18 130339" src="https://github.com/user-attachments/assets/29e21223-0b78-410d-b0f3-79364ba6f82c" />
+<img width="898" height="302" alt="Screenshot 2026-07-18 130348" src="https://github.com/user-attachments/assets/760a838f-bdde-4a3b-8c3d-b6e7a30fe604" />
+<img width="898" height="296" alt="Screenshot 2026-07-18 130358" src="https://github.com/user-attachments/assets/4769513f-6ca2-4400-88c3-7bcd6e425882" />
+
+
+
+
+
+
 # 📚 Library Management System
 
 A full-stack, production-ready Library Management System built with **React.js + Node.js + Express.js + MySQL**.
