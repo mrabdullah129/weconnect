@@ -1,46 +1,166 @@
-#Dashboard#
+# 📸 Project Screenshots
 
-<img width="947" height="442" alt="Screenshot 2026-07-18 130328" src="https://github.com/user-attachments/assets/52873387-ca2b-49ec-afce-7b7ef47e2abc" />
-<img width="896" height="319" alt="Screenshot 2026-07-18 130339" src="https://github.com/user-attachments/assets/29e21223-0b78-410d-b0f3-79364ba6f82c" />
-<img width="898" height="302" alt="Screenshot 2026-07-18 130348" src="https://github.com/user-attachments/assets/760a838f-bdde-4a3b-8c3d-b6e7a30fe604" />
-<img width="898" height="296" alt="Screenshot 2026-07-18 130358" src="https://github.com/user-attachments/assets/4769513f-6ca2-4400-88c3-7bcd6e425882" />
-#Books#
-<img width="895" height="440" alt="Screenshot 2026-07-18 130928" src="https://github.com/user-attachments/assets/b7c18007-9ee7-4142-b40a-13ea4e928bc4" />
-#Add Books#
-<img width="665" height="366" alt="Screenshot 2026-07-18 131128" src="https://github.com/user-attachments/assets/6b856c51-b994-4797-b36a-b13dbb133be3" />
-<img width="664" height="346" alt="Screenshot 2026-07-18 131140" src="https://github.com/user-attachments/assets/d10fe25d-b9f2-40b6-857f-11ce22885a76" />
-<img width="674" height="223" alt="Screenshot 2026-07-18 131148" src="https://github.com/user-attachments/assets/30fc5202-b34c-4096-b986-fef7fab6c9fb" />
-#Categories#
-<img width="899" height="437" alt="Screenshot 2026-07-18 131402" src="https://github.com/user-attachments/assets/a4c5f2ef-fac2-4e51-a974-96dfda8bf32a" />
-<img width="293" height="331" alt="Screenshot 2026-07-18 131432" src="https://github.com/user-attachments/assets/06be7abe-244e-4dc1-b92f-1b45ea377e2c" />
-#Authore# 
-<img width="753" height="437" alt="Screenshot 2026-07-18 131641" src="https://github.com/user-attachments/assets/3734f43d-7f3c-42bd-a03f-432364d555fa" />
-<img width="446" height="332" alt="Screenshot 2026-07-18 131649" src="https://github.com/user-attachments/assets/5c10ce94-0767-4b0b-b929-7b72484ff27e" />
-#Publishers#
-<img width="751" height="438" alt="Screenshot 2026-07-18 131817" src="https://github.com/user-attachments/assets/fb962689-197a-47de-bb4e-f6a96e39101f" />
-<img width="445" height="389" alt="Screenshot 2026-07-18 132204" src="https://github.com/user-attachments/assets/3da6c4a7-ca9a-4733-a1e5-894e7bc649ab" />
-#Member#
-<img width="906" height="438" alt="Screenshot 2026-07-18 132241" src="https://github.com/user-attachments/assets/54fc9693-1d53-4623-8b1d-e11ef45e6348" />
-#register Member#
-<img width="671" height="364" alt="Screenshot 2026-07-18 132252" src="https://github.com/user-attachments/assets/30510fba-39af-4f1c-92ac-57f1a42bc0ba" />
-<img width="670" height="392" alt="Screenshot 2026-07-18 132304" src="https://github.com/user-attachments/assets/70105918-4157-4d2e-b447-aac11f86467b" />
-#Borrow Book#
-<img width="953" height="440" alt="Screenshot 2026-07-18 132710" src="https://github.com/user-attachments/assets/7d084956-7aba-4297-a21b-d87d8b60c7ed" />
-<img width="445" height="338" alt="Screenshot 2026-07-18 132719" src="https://github.com/user-attachments/assets/c5c4a552-8bef-49cd-97f4-bea18dd0c156" />
-#Return Books#
-<img width="952" height="432" alt="Screenshot 2026-07-18 133023" src="https://github.com/user-attachments/assets/5dd2b2fc-0f47-46fc-b260-d2ae099cbfbc" />
-<img width="440" height="323" alt="Screenshot 2026-07-18 133032" src="https://github.com/user-attachments/assets/0e70b835-e3fb-435a-8a58-a7291f50bda3" />
-#Fine Management #
-<img width="891" height="438" alt="Screenshot 2026-07-18 133656" src="https://github.com/user-attachments/assets/a103b75d-539d-4154-a4d5-8691d676c1f2" />
+> Complete preview of the **Library Management System**.
 
-#Repoert#
-<img width="934" height="431" alt="Screenshot 2026-07-18 133917" src="https://github.com/user-attachments/assets/c4e82874-5f0b-48ca-8647-1b4fb74af83e" />
-#Library Setting#
-<img width="946" height="438" alt="Screenshot 2026-07-18 134140" src="https://github.com/user-attachments/assets/405bea17-6d2c-4ddc-9e79-74b0ecd66903" />
-#My Porfile#
-<img width="894" height="438" alt="Screenshot 2026-07-18 134313" src="https://github.com/user-attachments/assets/075e4222-6e30-46df-a3a5-7a8fec8f2be4" />
-#User View#
-<img width="905" height="437" alt="Screenshot 2026-07-18 134516" src="https://github.com/user-attachments/assets/8b44b271-35b8-48cc-91a4-c4c4c728b914" />
+---
+
+## 📑 Table of Contents
+
+- [📊 Dashboard](#-dashboard)
+- [📚 Books](#-books)
+- [➕ Add Books](#-add-books)
+- [🗂️ Categories](#️-categories)
+- [✍️ Authors](#️-authors)
+- [🏢 Publishers](#-publishers)
+- [👤 Members](#-members)
+- [📝 Register Member](#-register-member)
+- [📖 Borrow Books](#-borrow-books)
+- [🔄 Return Books](#-return-books)
+- [💰 Fine Management](#-fine-management)
+- [📈 Reports](#-reports)
+- [⚙️ Library Settings](#️-library-settings)
+- [👤 My Profile](#-my-profile)
+- [🙋 User View](#-user-view)
+
+---
+
+# 📊 Dashboard
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/52873387-ca2b-49ec-afce-7b7ef47e2abc" width="900">
+</p>
+
+| Dashboard Analytics | Dashboard Statistics |
+|--------------------|----------------------|
+| <img src="https://github.com/user-attachments/assets/29e21223-0b78-410d-b0f3-79364ba6f82c"> | <img src="https://github.com/user-attachments/assets/760a838f-bdde-4a3b-8c3d-b6e7a30fe604"> |
+
+| Recent Activity |
+|-----------------|
+| <img src="https://github.com/user-attachments/assets/4769513f-6ca2-4400-88c3-7bcd6e425882"> |
+
+---
+
+# 📚 Books
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/b7c18007-9ee7-4142-b40a-13ea4e928bc4" width="900">
+</p>
+
+---
+
+# ➕ Add Books
+
+| Book Information | Upload Cover |
+|-----------------|--------------|
+| <img src="https://github.com/user-attachments/assets/6b856c51-b994-4797-b36a-b13dbb133be3"> | <img src="https://github.com/user-attachments/assets/d10fe25d-b9f2-40b6-857f-11ce22885a76"> |
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/30fc5202-b34c-4096-b986-fef7fab6c9fb" width="600">
+</p>
+
+---
+
+# 🗂️ Categories
+
+| Categories | Add Category |
+|------------|--------------|
+| <img src="https://github.com/user-attachments/assets/a4c5f2ef-fac2-4e51-a974-96dfda8bf32a"> | <img src="https://github.com/user-attachments/assets/06be7abe-244e-4dc1-b92f-1b45ea377e2c"> |
+
+---
+
+# ✍️ Authors
+
+| Authors List | Add Author |
+|--------------|------------|
+| <img src="https://github.com/user-attachments/assets/3734f43d-7f3c-42bd-a03f-432364d555fa"> | <img src="https://github.com/user-attachments/assets/5c10ce94-0767-4b0b-b929-7b72484ff27e"> |
+
+---
+
+# 🏢 Publishers
+
+| Publishers | Add Publisher |
+|------------|---------------|
+| <img src="https://github.com/user-attachments/assets/fb962689-197a-47de-bb4e-f6a96e39101f"> | <img src="https://github.com/user-attachments/assets/3da6c4a7-ca9a-4733-a1e5-894e7bc649ab"> |
+
+---
+
+# 👤 Members
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/54fc9693-1d53-4623-8b1d-e11ef45e6348" width="900">
+</p>
+
+---
+
+# 📝 Register Member
+
+| Registration Form | Member Details |
+|-------------------|----------------|
+| <img src="https://github.com/user-attachments/assets/30510fba-39af-4f1c-92ac-57f1a42bc0ba"> | <img src="https://github.com/user-attachments/assets/70105918-4157-4d2e-b447-aac11f86467b"> |
+
+---
+
+# 📖 Borrow Books
+
+| Borrow Books | Borrow Form |
+|--------------|-------------|
+| <img src="https://github.com/user-attachments/assets/7d084956-7aba-4297-a21b-d87d8b60c7ed"> | <img src="https://github.com/user-attachments/assets/c5c4a552-8bef-49cd-97f4-bea18dd0c156"> |
+
+---
+
+# 🔄 Return Books
+
+| Return Books | Return Form |
+|--------------|-------------|
+| <img src="https://github.com/user-attachments/assets/5dd2b2fc-0f47-46fc-b260-d2ae099cbfbc"> | <img src="https://github.com/user-attachments/assets/0e70b835-e3fb-435a-8a58-a7291f50bda3"> |
+
+---
+
+# 💰 Fine Management
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/a103b75d-539d-4154-a4d5-8691d676c1f2" width="900">
+</p>
+
+---
+
+# 📈 Reports
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/c4e82874-5f0b-48ca-8647-1b4fb74af83e" width="900">
+</p>
+
+---
+
+# ⚙️ Library Settings
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/405bea17-6d2c-4ddc-9e79-74b0ecd66903" width="900">
+</p>
+
+---
+
+# 👤 My Profile
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/075e4222-6e30-46df-a3a5-7a8fec8f2be4" width="900">
+</p>
+
+---
+
+# 🙋 User View
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/8b44b271-35b8-48cc-91a4-c4c4c728b914" width="900">
+</p>
+
+---
+
+<div align="center">
+
+### ⭐ If you like this project, don't forget to give it a Star!
+
+</div>
 
 
 
