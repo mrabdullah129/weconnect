@@ -1,0 +1,6 @@
+{
+  "name": "novaloop-social-server",
+  "private": true,
+  "type": "module",
+  "main": "server.js"
+}
